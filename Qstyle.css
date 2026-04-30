@@ -1,0 +1,217 @@
+:root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --success: #27ae60;
+    --danger: #e74c3c;
+    --white: #ffffff;
+    --bg: #f0f2f5;
+}
+
+/* Screen height lock karne ke liye */
+body { 
+    margin: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    display: flex; 
+    flex-direction: column; 
+    height: 100vh; 
+    background: var(--bg); 
+    overflow: hidden; 
+}
+
+/* --- STATIC HEADER --- */
+.q-static-top { 
+    background: var(--primary); 
+    color: white; 
+    padding: 10px 25px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 4px solid var(--accent);
+    flex-shrink: 0; 
+    z-index: 1000;
+}
+
+.header-info h1 { margin: 0; font-size: 24px; letter-spacing: 1px; }
+.header-info p { margin: 0; font-size: 14px; opacity: 0.8; }
+
+/* Search Bar Styles */
+.q-search-bar { 
+    display: flex; 
+    background: white; 
+    border-radius: 25px; 
+    padding: 5px 15px; 
+    align-items: center; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+}
+
+.q-search-bar input { 
+    border: none; 
+    outline: none; 
+    padding: 8px; 
+    width: 180px; 
+    font-size: 16px; 
+    color: #333;
+}
+
+.icon-btn { background: none; border: none; cursor: pointer; font-size: 18px; margin-left: 8px; }
+
+/* --- STATIC SUB-HEADER CONTROLS --- */
+.q-sub-header {
+    background: #ecf0f1;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+.q-view-tools button {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* --- MAIN LAYOUT --- */
+.app-body { 
+    display: flex; 
+    flex: 1; 
+    overflow: hidden; 
+}
+
+/* Sidebar Styling */
+.q-sidebar { 
+    width: 220px; 
+    background: white; 
+    border-right: 1px solid #ddd; 
+    padding: 15px; 
+    overflow-y: auto; 
+    flex-shrink: 0;
+}
+
+.sidebar-item { 
+    padding: 12px 15px; 
+    margin-bottom: 8px; 
+    background: #f8f9fa; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    transition: 0.2s;
+    border-left: 4px solid transparent;
+}
+
+.sidebar-item:hover { 
+    background: var(--accent); 
+    color: white; 
+    border-left: 4px solid var(--primary);
+}
+
+/* Content Area Scroll */
+.q-content {
+    flex: 1;
+    overflow-y: auto; 
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+
+.q-tile-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px; 
+}
+
+.q-tile { 
+    background: white; 
+    border-radius: 15px; 
+    padding: 20px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
+    border-top: 6px solid var(--accent); 
+    transition: 0.3s; 
+    position: relative; /* Speaker button ke positioning ke liye */
+}
+
+.q-tile:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+
+/* --- NEW: Individual Speaker Button (Tile ke andar) --- */
+.tile-speaker {
+    background: #f0f3f4;
+    border: 1.5px solid #d5dbdb;
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+}
+
+.tile-speaker:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.ans-box { 
+    margin-top: 15px; 
+    padding: 12px; 
+    background: #e8f5e9; 
+    border-radius: 8px; 
+    color: var(--success); 
+    display: none; 
+    font-weight: bold; 
+    border: 1px dashed var(--success); 
+}
+
+/* --- STATIC FOOTER (Simplified) --- */
+.q-footer { 
+    background: var(--primary); 
+    padding: 15px; 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    flex-shrink: 0;
+    z-index: 1000;
+}
+
+.q-footer button { 
+    min-width: 180px; 
+    padding: 12px 25px; 
+    border-radius: 30px; 
+    border: none; 
+    font-weight: bold; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: 0.2s;
+}
+
+/* Footer Button Colors */
+.btn-stop { background: var(--danger); color: white; }
+.btn-pdf { background: #f39c12; color: white; }
+
+.q-footer button:active { transform: scale(0.95); }
+
+/* --- PRINT / PDF SETTINGS --- */
+@media print {
+    .q-static-top, .q-sub-header, .q-sidebar, .q-footer, .icon-btn, .q-view-tools, .tile-speaker {
+        display: none !important;
+    }
+    body, .app-body, .q-content {
+        overflow: visible !important;
+        display: block !important;
+        height: auto !important;
+    }
+    .q-tile {
+        break-inside: avoid;
+        border: 1px solid #ddd !important;
+        box-shadow: none !important;
+        margin-bottom: 20px;
+    }
+    .ans-box { display: block !important; }
+}
