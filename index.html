@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: EK PRASHNAWALI</title>
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="Qstyle.css">
+    <!-- Standard Favicon -->
+<link rel="icon" type="image/png" href="GKGS.png">
+
+<!-- Apple/iOS devices ke liye -->
+<link rel="apple-touch-icon" href="icon-192.png">
+
+<!-- Manifest file ka link -->
+<link rel="manifest" href="Qmanifest.json">
+</head>
+<body>
+
+    <!-- Static Top Bar: Header aur Google Search Fix -->
+    <header class="q-static-top">
+        <div class="header-info">
+            <h1>Quiz: Ek Prashnawali</h1>
+            <p>Developed by: PRASHANT SAGAR</p>
+        </div>
+        
+        <div class="q-search-wrapper">
+            <div class="q-search-bar">
+                <!-- Google Search Input -->
+                <input type="text" id="qSearch" placeholder="Google search...">
+                <!-- Mic & Search Buttons -->
+                <button onclick="qVoiceSearch()" class="icon-btn" title="Speak to Search">🎤</button>
+                <button onclick="qGoogleSearch()" class="icon-btn" title="Search on Google">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Static Sub-Header: Controls (Font & Fullscreen) -->
+    <div class="q-sub-header">
+        <button class="q-menu-btn" onclick="qToggleSidebar()">☰ Topics</button>
+        
+        <div class="q-view-tools">
+            <button onclick="qFontChange('plus')" title="Bada karein">A+</button>
+            <button onclick="qFontChange('minus')" title="Chhota karein">A-</button>
+            <button onclick="qToggleFull()" title="Fullscreen mode">⛶ Fullscreen</button>
+        </div>
+    </div>
+
+    <!-- Main App Layout -->
+    <div class="app-body">
+        <!-- Static Sidebar -->
+        <nav class="q-sidebar" id="qSidebar">
+            <h3 style="padding-left: 15px; color: #7f8c8d;">MENU</h3>
+            <div class="sidebar-item" onclick="qLoadCategory('bihar')">📍 Bihar Special</div>
+            <div class="sidebar-item" onclick="qLoadCategory('gk')">🌍 General Knowledge</div>
+            <div class="sidebar-item" onclick="qLoadCategory('ca')">📢 Current Affairs</div>
+            <hr style="border: 0.5px solid #eee; margin: 10px 0;">
+            <div class="sidebar-item" onclick="qLoadSession(1)">📝 Session 1 (Quiz)</div>
+        </nav>
+
+        <!-- Scrollable Main Content -->
+        <main class="q-content" id="qMainScroll">
+            <h2 id="sessionTitle" style="margin-bottom: 20px; color: #2c3e50;">Dashboard</h2>
+            
+            <div id="qDisplayArea" class="q-tile-grid">
+                <!-- Attractive Tiles yahan JS se load hongi (Listen button ke saath) -->
+                <div class="q-tile" style="grid-column: 1/-1; text-align: center; border-top-color: #7f8c8d;">
+                    <h3>Swagat Hai!</h3>
+                    <p>Baanyi taraf (Left menu) se koi bhi topic chunein aur padhna shuru karein.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Static Footer: Simplified for Stop & PDF -->
+    <footer class="q-footer">
+        <!-- Stop All: Kisi bhi chalti hui awaaz ko band karne ke liye -->
+        <button onclick="qStop()" class="btn-stop">⏹ STOP ALL SOUND</button>
+        
+        <!-- PDF Button -->
+        <button onclick="qGeneratePDF()" class="btn-pdf">📄 Save as PDF</button>
+    </footer>
+
+    <!-- Scripts Sequence -->
+    <script src="Qbihar.js"></script>
+    <script src="Qgk.js"></script>
+    <script src="Qca.js"></script>
+    <script src="Qquiz.js"></script>
+    <script src="Qmain.js"></script>
+    
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('Dsw.js')
+        .then(reg => console.log('Service Worker Registered'))
+        .catch(err => console.log('Registration Failed', err));
+    });
+  }
+</script>
+
+</body>
+</html>
