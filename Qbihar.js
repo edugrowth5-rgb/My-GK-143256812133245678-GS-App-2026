@@ -1,0 +1,22 @@
+const qBiharData = {
+    "Where is the first 'Bio-Diversity Park' of Bihar located?": "Araria",
+    "Which district in Bihar is the largest producer of Makhana in the world?": "Darbhanga",
+    "On which river is the world's longest rubber dam 'Gayaji Dam' built?": "Phalgu River",
+    "Who is known as the 'Shakespeare of Bhojpuri'?": "Bhikhari Thakur",
+    "Which city in Bihar is known as the 'Silk City'?": "Bhagalpur",
+    "In which year was the 'Champaran Satyagraha' led by Mahatma Gandhi?": "1917",
+    "Where is the 'Mahatma Gandhi Setu' located in Bihar?": "Patna",
+    "Which district of Bihar has the highest literacy rate?": "Rohtas",
+    "Where is the 'Sanjay Gandhi Biological Park' situated?": "Patna",
+    "Which river is famously known as the 'Sorrow of Bihar'?": "Kosi River",
+    "What is the state animal of Bihar?": "Gaur (Mithun)",
+    "Which Bihar site is included in the UNESCO World Heritage list?": "Nalanda Mahavihara",
+    "Who was the first Chief Minister of Bihar?": "Sri Krishna Singh",
+    "In which district of Bihar is the 'Shanti Stupa' located?": "Vaishali",
+    "Which city in Bihar hosted the first Buddhist Council?": "Rajgir",
+    "Which fruit from Muzaffarpur, Bihar has received the GI Tag?": "Shahi Litchi",
+    "Where is the 'Vikramshila Gangetic Dolphin Sanctuary' located?": "Bhagalpur",
+    "What is the total number of districts in Bihar?": "38",
+    "Which district is the leading producer of Jute in Bihar?": "Purnia",
+    "In which city is the 'Bihar Museum' located?": "Patna"
+};
