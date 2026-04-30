@@ -1,0 +1,22 @@
+const qGkData = {
+    "Who is considered the 'Father of Artificial Intelligence'?": "John McCarthy",
+    "Which planet is known as the 'Red Planet'?": "Mars",
+    "What is the chemical symbol for Gold?": "Au",
+    "Who was the first woman to fly solo across the Atlantic Ocean?": "Amelia Earhart",
+    "Which organ in the human body is responsible for pumping blood?": "Heart",
+    "What is the largest ocean on Earth?": "Pacific Ocean",
+    "In which year did India win its first Cricket World Cup?": "1983",
+    "Who wrote the national anthem of India?": "Rabindranath Tagore",
+    "Which is the smallest country in the world by area?": "Vatican City",
+    "What is the powerhouse of the cell?": "Mitochondria",
+    "Which gas is most abundant in the Earth's atmosphere?": "Nitrogen",
+    "Who is the author of the book 'The Discovery of India'?": "Jawaharlal Nehru",
+    "Which continent is known as the 'Dark Continent'?": "Africa",
+    "What is the currency of Japan?": "Yen",
+    "Which is the longest river in the world?": "Nile",
+    "Who invented the telephone?": "Alexander Graham Bell",
+    "What is the capital of France?": "Paris",
+    "Which vitamin is obtained from Sunlight?": "Vitamin D",
+    "What is the hardest natural substance on Earth?": "Diamond",
+    "Which state in India is known as the 'Land of Five Rivers'?": "Punjab"
+};
